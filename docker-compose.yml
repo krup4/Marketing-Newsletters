@@ -1,14 +1,14 @@
 version: '3'
 services:
   service:
-    container_name: backend
+    container_name: api_backend
     build:
       context: ./
       dockerfile: Dockerfile
     ports:
       - "8080:8080"
   db:
-    container_name: database
+    container_name: postgresql
     image: postgres:16
     command: -db-ssl-mode=allow
     ports:
